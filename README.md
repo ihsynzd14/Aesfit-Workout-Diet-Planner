@@ -19,7 +19,7 @@ Aesfit is a full-stack workout and diet planning application built with **Next.j
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/yourusername/aesfit-workout-diet-planner.git
+    git clone https://github.com/ihsynzd14/Aesfit-Workout-Diet-Planner
     ```
 
 2. Install dependencies for both the frontend and backend:
