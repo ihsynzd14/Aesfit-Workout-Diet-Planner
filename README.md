@@ -8,11 +8,12 @@ Aesfit is a full-stack workout and diet planning application built with **Next.j
 - 🍽️ **Diet Plans**: Explore personalized diet plans for different fitness goals such as weight loss, muscle gain, or maintenance.
 - 🧮 **Health Metrics Calculator**: Calculate essential health metrics such as BMI (Body Mass Index), body fat percentage, calorie needs, and more.
 - 📈 **Track Your Progress**: Keep track of your fitness progress and update your workout/diet plans as you go.
-  
+
 ## Tech Stack
 
 - **Frontend**: [Next.js](https://nextjs.org/)
 - **Backend**: [Node.js](https://nodejs.org/)
+- **Database**: [MongoDB Cloud Cluster](https://www.mongodb.com/cloud/atlas)
 
 ## Installation
 
@@ -29,19 +30,45 @@ Aesfit is a full-stack workout and diet planning application built with **Next.j
     npm install
     ```
 
-3. Start the development server:
+3. Set up MongoDB Cloud Cluster:
+   - Create a MongoDB Atlas account [here](https://www.mongodb.com/cloud/atlas).
+   - Create a cluster and get your MongoDB connection string.
+   - Whitelist your IP address to allow connections.
+
+4. Create a `.env.local` file and add your environment variables:
+
+    ```bash
+    NEXT_PUBLIC_API_URL=http://yourapi.com
+    MONGODB_URI=your_mongodb_connection_string
+    SECRET_KEY=your_secret_key
+    ```
+
+5. Start the development server:
 
     ```bash
     npm run dev
     ```
 
-4. Open your browser and go to `http://localhost:3000` to see the app in action.
+6. Open your browser and go to `http://localhost:3000` to see the app in action.
 
-## Environment Variables
+## MongoDB Configuration
 
-Make sure to set the following environment variables in a `.env.local` file:
+Ensure your MongoDB Cloud Cluster is properly set up by following these steps:
 
-```bash
-NEXT_PUBLIC_API_URL=http://yourapi.com
-DATABASE_URL=your_database_url
-SECRET_KEY=your_secret_key
+1. Go to the MongoDB Atlas dashboard and create a new database cluster.
+2. Add your database user credentials.
+3. Use the connection string in your `.env.local` file:
+
+    ```bash
+    MONGODB_URI=mongodb+srv://<username>:<password>@cluster0.mongodb.net/<dbname>?retryWrites=true&w=majority
+    ```
+
+4. You can manage your database from the MongoDB dashboard or through MongoDB Compass.
+
+## Contributing
+
+Feel free to open issues or create pull requests to help improve the project. Contributions are always welcome!
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
